@@ -1,0 +1,199 @@
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.icon img {
+    margin-right: 10px; /* Space between the image and text */
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+}
+
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 5px 0;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.stockcake.com/public/d/1/6/d16e07af-1719-4d3e-b6c3-dc8892459bef_large/lush-green-fields-stockcake.jpg');
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Add a slight blur to the background */
+}
+
+.hidden {
+    display: none;
+}
+
+.login-register, .icon, form, .content, .box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+h1 {
+    color: #297506;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.icon img {
+    margin-right: 10px;
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+}
+
+.icon:hover {
+    background-color: #8ce4f0; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add box shadow on hover */
+    border: 4px solid #3bb63f; /* Add border color on hover */
+}
+
+.icon + .icon {
+    margin-top: 30px; /* Increase the spacing between icons */
+}
+
+
+.clicked {
+    border: 2px solid #4caf50; /* Change this color to your preferred border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for a nicer effect */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+.icon img {
+    margin-right: 10px;
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+}
+
+.icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+    width: 90%;
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.confirmation-page-common {
+    font-weight: bold;
+    color: #f77070; /* Change this color as needed */
+    font-family: 'Arial', sans-serif; /* Set the desired font */
+    font-size: 20px; /* Adjust the font size */
+    text-align: center; /* Center the text */
+    margin: 20px;
+}
+
+
+.welcome-text {
+    color: #99c4f3; /* Change this color to your preferred color */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+.bold-text {
+    font-weight: bold;
+}
+.bold-para {
+    font-weight: bold;
+    color: rgb(230, 230, 216);
+    text-align: center;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}

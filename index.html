@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vismay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-register" id="login-register">
+            <h1>Register/Login</h1>
+            <form id="login-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Priyal" required>
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="18" required>
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" name="gender" placeholder="Female" required>
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" name="contact" placeholder="9868496019" required>
+                <label for="pincode">Pincode</label>
+                <input type="number" id="pincode" name="pincode" placeholder="91" required>
+                <button type="button" onclick="login()">Login</button>
+            </form>
+            <div class="icon" onclick="navigate('donate')">
+                <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvczkzLXBtLTI3NTcuanBn.jpg" alt="Donate Icon">
+            </div>
+        </div>
+
+        <div class="hidden " id="home-page">
+            <h1 class="welcome-text">Welcome to Vismay</h1>
+            <div class="icon" onclick="navigate('barter')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6SfXYKvXk4z-yG_8F2xK3kCJqXN0mjJYjTg&s" alt="Barter Icon">
+                 <span class="bold-text"> Barter</span>
+            </div>
+            <div class="icon" onclick="navigate('scholarship')">
+                <img src = " https://img.freepik.com/free-vector/books-with-money-loans-scholarships_603843-826.jpg" alt="Scholarship Icon">
+                <span class="bold-text"> Scholarship</span>
+            </div>
+            <div class="icon" onclick="navigate('sell')">
+                <img src = " https://somethingaboutmarketing.com/wp-content/uploads/2019/09/how-to-sell-something-about-marketing.jpg" alt = "Sell Icon">
+                <span class="bold-text"> Sell</span>
+            </div>
+            <div class="icon" onclick="navigate('loan')">
+                <img src = "https://static.vecteezy.com/system/resources/thumbnails/024/269/311/small/car-house-personal-money-loan-concept-finance-business-icon-on-wooden-cube-saving-money-for-a-car-money-and-house-wooden-cubes-with-word-loan-copy-space-for-text-loan-payment-car-and-house-photo.jpg" alt="Loan Icon">
+                <span class="bold-text">Loan</span>
+            </div>
+            <div class="icon" onclick="navigate('customer-care')">
+                <img src="https://media.istockphoto.com/id/1359876068/vector/customer-service-hotline-operators-consult-customers-with-headsets-on-computers-247-global.jpg?s=612x612&w=0&k=20&c=HcrFsPakslvox6rWnOWllH-jJ32TUNrTKusZ1J0_5oc=" alt="customer-care Icon">
+                <span class="bold-text"> Customer Care</span>
+            </div>
+
+            
+
+        </div>
+
+        <div class="hidden fadeInUp" id="donate-page">
+            <h1>Donations</h1>
+            <form>
+                <label for="donor-name">Your Name</label>
+                <input type="text" id="donor-name" name="donor-name" required>
+                <label for="donor-contact">Your Contact Number</label>
+                <input type="tel" id="donor-contact" name="donor-contact" required>
+                <label for="donor-email">Your E-mail</label>
+                <input type="email" id="donor-email" name="donor-email" required>
+                <button type="button" onclick="submitDonation()">Submit</button>
+            </form>
+        </div>
+
+        <div class="hidden confirmation-page-common" id="thankyou-page">
+            <h1 class="welcome-text">Thank you for making this gesture!</h1>
+            <p>Banking details will be sent to you on your registered e-mail address. The donated amount will be used to provide scholarships to farmers' children and to provide the needy farmers with important resources.</p>
+            <button onclick="backToMain()">Back to Main Screen</button>
+        </div>
+
+        <div class="hidden fadeInUp" id="barter-page">
+            <h1>Barter</h1>
+            <div class="icon" onclick="navigate('tools')">Tools</div>
+            <div class="icon" onclick="navigate('machine')">Machine</div>
+            <div class="icon" onclick="navigate('insecticide')">Insecticide</div>
+            <div class="icon" onclick="navigate('seed')">Seed</div>
+            <div class="icon" onclick="navigate('fertilizer')">Fertilizer</div>
+            <div class="icon" onclick="navigate('sprayer')">Sprayer</div>
+            <div class="icon" onclick="navigate('others')">Others</div>
+            <div class="icon" onclick="navigate('cattle-food')">Cattle Food</div>
+            <div class="icon" onclick="navigate('home')">Return to Home</div>
+        </div>
+
+        <div class="hidden fadeInUp" id="tools-page">
+            <h1>Tools</h1>
+            <form>
+                <label for="tool-name">Your Tool Name</label>
+                <input type="text" id="tool-name" name="tool-name" required>
+                <label for="tool-quantity">Your Tool Quantity</label>
+                <input type="text" id="tool-quantity" name="tool-quantity" required>
+                <label for="exchange">What do you want in exchange?</label>
+                <input type="text" id="exchange" name="exchange" required>
+                <button type="button" onclick="confirmTools()">Confirm</button>
+            </form>
+        </div>
+
+        <div class="hidden fadeInUp" id="machine-page">
+            <h1>Machinery</h1>
+            <form>
+                <label for="machine-name">Your Machine Name</label>
+                <input type="text" id="machine-name" name="machine-name" required>
+                <label for="machine-quantity">Your Machine Quantity</label>
+                <input type="text" id="machine-quantity" name="machine-quantity" required>
+                <label for="exchange">What do you want in exchange?</label>
+                <input type="text" id="exchange" name="exchange" required>
+                <button type="button" onclick="confirmMachine()">Confirm</button>
+            </form>
+        </div>
+
+        <div class="hidden fadeInUp" id="insecticide-page">
+            <h1>Insecticide</h1>
+            <form>
+                <label for="insecticide-name">Your Insecticide Name</label>
+                <input type="text" id="insecticide-name" name="insecticide-name" required>
+                <label for="insecticide-quantity">Your Insecticide Quantity</label>
+                <input type="text" id="insecticide-quantity" name="insecticide-quantity" required>
+                <label for="exchange">What do you want in exchange?</label>
+                <input type="text" id="exchange" name="exchange" required>
+                <button type="button" onclick="confirmInsecticide()">Confirm</button>
+            </form>
+        </div>
+
+        <div class="hidden fadeInUp" id="seed-page">
+            <h1>Seed</h1>
+            <form>
+                <label for="seed-name">Your Seed Name</label>
+                <input type="text" id="seed-name" name="seed-name" required>
+                <label for="seed-quantity">Your Seed Quantity</label>
+                <input type="text" id="seed-quantity" name="seed-quantity" required>
+                <label for="exchange">What do you want in exchange?</label>
+                <input type="text" id="exchange" name="exchange" required>
+                <button type="button" onclick="confirmSeed()">Confirm</button>
+            </form>
+        </div>
+
+        <div class="hidden fadeInUp" id="fertilizer-page">
+            <h1>Fertilizer</h1>
+            <form>
+                <label for="fertilizer-name">Your Fertilizer Name</label>
+                <input type="text" id="fertilizer-name" name="fertilizer-name" required>
+                <label for="fertilizer-quantity">Your Fertilizer Quantity</label>
+                <input type="text" id="fertilizer-quantity" name="fertilizer-quantity" required>
+                <label for="exchange">What do you want in exchange?</label>
+                <input type="text" id="exchange" name="exchange" required>
+                <button type="button" onclick="confirmFertilizer()">Confirm</button>
+            </form>
+        </div>
+
+        <div class="hidden fadeInUp" id="sprayer-page">
+            <h1>Sprayer</h1>
+            <form>
+                <label for="sprayer-name">Your Sprayer Name</label>
+                <input type="text" id="sprayer-name" name="sprayer-name" required>
+                <label for="sprayer-quantity">Your Sprayer Quantity</label>
+                <input type="text" id="sprayer-quantity" name="sprayer-quantity" required>
+                <label for="exchange">What do you want in exchange?</label>
+                <input type="text" id="exchange" name="exchange" required>
+                <button type="button" onclick="confirmSprayer()">Confirm</button>
+            </form>
+        </div>
+
+        <div class="hidden fadeInUp" id="others-page">
+            <h1>Others</h1>
+            <form>
+                <label for="others-name">Your Product Name</label>
+                <input type="text" id="others-name" name="others-name" required>
+                <label for="others-quantity">Your Product Quantity</label>
+                <input type="text" id="others-quantity" name="others-quantity" required>
+                <label for="exchange">What do you want in exchange?</label>
+                <input type="text" id="exchange" name="exchange" required>
+                <button type="button" onclick="confirmOthers()">Confirm</button>
+            </form>
+        </div>
+
+        <div class="hidden fadeInUp" id="cattle-food-page">
+            <h1>Cattle Food</h1>
+            <form>
+                <label for="cattle-food-name">Cattle's Food Name</label>
+                <input type="text" id="cattle-food-name" name="cattle-food-name" required>
+                <label for="cattle-food-quantity">Cattle's Food Quantity</label>
+                <input type="text" id="cattle-food-quantity" name="cattle-food-quantity" required>
+                <label for="exchange">What do you want in exchange?</label>
+                <input type="text" id="exchange" name="exchange" required>
+                <button type="button" onclick="confirmCattleFood()">Confirm</button>
+            </form>
+        </div>
+
+        <div class="hidden fadeInUp" id="customer-care-page">
+            <h1>Customer Care</h1>
+            <form>
+                <label for="feedback">Give your feedback</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+                <button type="button" onclick="submitFeedback()">Submit</button>
+            </form>
+            <p class="bold-para">Contact us on: <br>9868496019<br>9968855969</p>
+        </div>
+
+        <div class="hidden confirmation-page-common" id="feedback-thankyou-page">
+            <h1>Thank you for your gesture!</h1>
+            <p>Your feedback is really valuable to us.</p>
+            <button type="button" onclick="backToHome()">Home Page</button>
+        </div>
+        
+
+        <div class="hidden confirmation-page-common" id="confirmation-page">
+            <h1>Your response has been recorded</h1>
+            <p>Our team will contact you as soon as possible on your registered mobile number. Thank you!</p>
+            <button onclick="backToHome()">Home Page</button>
+        </div>
+
+        <div class="hidden confirmation-page-common" id="confirmation-machine-page">
+            <h1>Your response has been recorded</h1>
+            <p>Our team will contact you as soon as possible on your registered mobile number. Thank you!</p>
+            <button onclick="backToHome()">Home Page</button>
+        </div>
+
+        <div class="hidden confirmation-page-common" id="confirmation-insecticide-page">
+            <h1>Your response has been recorded</h1>
+            <p>Our team will contact you as soon as possible on your registered mobile number. Thank you!</p>
+            <button onclick="backToHome()">Home Page</button>
+        </div>
+
+        <div class="hidden confirmation-page-common" id="confirmation-seed-page">
+            <h1>Your response has been recorded</h1>
+            <p>Our team will contact you as soon as possible on your registered mobile number. Thank you!</p>
+            <button onclick="backToHome()">Home Page</button>
+        </div>
+
+        <div class="hidden confirmation-page-common" id="confirmation-fertilizer-page">
+            <h1>Your response has been recorded</h1>
+            <p>Our team will contact you as soon as possible on your registered mobile number. Thank you!</p>
+            <button onclick="backToHome()">Home Page</button>
+        </div>
+
+        <div class="hidden confirmation-page-common" id="confirmation-sprayer-page">
+            <h1>Your response has been recorded</h1>
+            <p>Our team will contact you as soon as possible on your registered mobile number. Thank you!</p>
+            <button onclick="backToHome()">Home Page</button>
+        </div>
+
+        <div class="hidden confirmation-page-common" id="confirmation-others-page">
+            <h1>Your response has been recorded</h1>
+            <p>Our team will contact you as soon as possible on your registered mobile number. Thank you!</p>
+            <button onclick="backToHome()">Home Page</button>
+        </div>
+
+        <div class="hidden confirmation-page-common" id="confirmation-cattle-food-page">
+            <h1>Your response has been recorded</h1>
+            <p>Our team will contact you as soon as possible on your registered mobile number. Thank you!</p>
+            <button onclick="backToHome()">Home Page</button>
+        </div>
+
+        <div class="hidden fadeInUp" id="scholarship-page">
+            <h1>Scholarship Application</h1>
+            <form>
+                <label for="child-name">Child's Name</label>
+                <input type="text" id="child-name" name="child-name" required>
+                <label for="child-age">Child's Age</label>
+                <input type="number" id="child-age" name="child-age" required>
+                <button type="button" onclick="submitScholarship()">Confirm</button>
+            </form>
+        </div>
+        
+        <div class="hidden confirmation-page-common" id="scholarship-thankyou-page">
+            <h1>Thank you for your application!</h1>
+            <p>Your scholarship application has been received. We will contact you soon through your registered mobile number.</p>
+            <button type="button" onclick="backToHome()">Home Page</button>
+        </div>
+        
+        <div class="hidden fadeInUp" id="loan-page">
+            <h1>Loan Application</h1>
+            <form>
+                <label for="amount-required">Amount Required</label>
+                <input type="text" id="amount required" name="amount required" required>
+                <label for="reason for loan">Reason For Loan</label>
+                <input type="text" id="reason for loan" name="reason for loan" required>
+                <button type="button" onclick="submitLoan()">Confirm</button>
+            </form>
+        </div>
+        
+        <div class="hidden confirmation-page-common" id="loan-thankyou-page">
+            <h1>Thank you for your application!</h1>
+            <p>Your loan application has been received. We will contact you soon through your registered mobile number.</p>
+            <button type="button" onclick="backToHome()">Home Page</button>
+        </div>
+        
+        <div class="hidden fadeInUp" id="sell-page">
+            <h1>Sell Product</h1>
+            <form>
+                <label for="product-name">Product Name</label>
+                <input type="text" id="product-name" name="product-name" required>
+                <label for="product-quantity">Product Quantity</label>
+                <input type="number" id="product-quantity" name="product-quantity" required>
+                <button type="button" onclick="submitSell()">Request for Buyers</button>
+            </form>
+        </div>
+        
+        <div class="hidden confirmation-page-common" id="sell-confirmation-page">
+            <h1>Your request has been sent!</h1>
+            <p>Our team will respond to you through your registered mobile number. Thank you!</p>
+            <button type="button" onclick="backToHome()">Home Page</button>
+        </div>
+        
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
